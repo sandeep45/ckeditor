@@ -16,7 +16,7 @@ module Ckeditor
       if Object.const_defined?("Formtastic")
         puts "change by sandeep arneja"
         #  Formtastic::SemanticFormHelper.builder = Ckeditor::CustomFormBuilder
-        Formtastic::SemanticFormHelper.builder = Ckeditor::CustomFormBuilder
+        Formtastic::Helpers::FormHelper.builder = Ckeditor::CustomFormBuilder
       end
     end
   end
