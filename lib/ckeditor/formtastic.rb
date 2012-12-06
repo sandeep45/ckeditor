@@ -1,6 +1,9 @@
 module Ckeditor
-  class CustomFormBuilder < Formtastic::SemanticFormBuilder
-
+  class CustomFormBuilder #< Formtastic::SemanticFormBuilder
+    # super class commented and include added by SANDEEP
+    puts "change by sandeep arneja"
+    include Formtastic::Inputs::Base
+    
     private
 
     def ckeditor_input(method, options)
@@ -8,5 +11,6 @@ module Ckeditor
       self.label(method, options_for_label(options)) <<
       self.send(:ckeditor_textarea, sanitized_object_name, method, html_options)
     end
+
   end
 end

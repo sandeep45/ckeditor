@@ -14,6 +14,8 @@ module Ckeditor
       ActionView::Helpers::AssetTagHelper.register_javascript_expansion :ckeditor => ["ckeditor/ckeditor"]
       
       if Object.const_defined?("Formtastic")
+        puts "change by sandeep arneja"
+        #  Formtastic::SemanticFormHelper.builder = Ckeditor::CustomFormBuilder
         Formtastic::SemanticFormHelper.builder = Ckeditor::CustomFormBuilder
       end
     end
